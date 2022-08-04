@@ -1,0 +1,309 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3405694,
+                    5760010
+                ]
+            },
+            "properties": {
+                "LFDNR": 1,
+                "NAME": "Parkhaus Theater",
+                "URL": "https://www.stadt-muenster.de/tiefbauamt/parkleitsystem/parkhaeuser/detailansicht/parkhaus/1.html",
+                "parkingTotal": "748",
+                "parkingFree": 537,
+                "status": "frei",
+                "type": "Parkhaus"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3406027,
+                    5759809
+                ]
+            },
+            "properties": {
+                "LFDNR": 2,
+                "NAME": "Parkplatz Hörster Platz",
+                "URL": "https://www.stadt-muenster.de/tiefbauamt/parkleitsystem/parkhaeuser/detailansicht/parkhaus/2.html",
+                "parkingTotal": "202",
+                "parkingFree": 91,
+                "status": "frei",
+                "type": "Parkplatz"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3406071,
+                    5759596
+                ]
+            },
+            "properties": {
+                "LFDNR": 3,
+                "NAME": "Parkhaus Alter Steinweg",
+                "URL": "https://www.stadt-muenster.de/tiefbauamt/parkleitsystem/parkhaeuser/detailansicht/parkhaus/3.html",
+                "parkingTotal": "390",
+                "parkingFree": 166,
+                "status": "frei",
+                "type": "Parkhaus"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3405007,
+                    5759992
+                ]
+            },
+            "properties": {
+                "LFDNR": 4,
+                "NAME": "Parkplatz Busparkplatz",
+                "URL": "https://www.stadt-muenster.de/tiefbauamt/parkleitsystem/parkhaeuser/detailansicht/parkhaus/4.html",
+                "parkingTotal": "63",
+                "parkingFree": 53,
+                "status": "frei",
+                "type": "Parkplatz"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3405015,
+                    5759843
+                ]
+            },
+            "properties": {
+                "LFDNR": 5,
+                "NAME": "Parkplatz Schlossplatz Nord",
+                "URL": "https://www.stadt-muenster.de/tiefbauamt/parkleitsystem/parkhaeuser/detailansicht/parkhaus/5.html",
+                "parkingTotal": "450",
+                "parkingFree": 450,
+                "status": "frei",
+                "type": "Parkplatz"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3405004,
+                    5759662
+                ]
+            },
+            "properties": {
+                "LFDNR": 6,
+                "NAME": "Parkplatz Schlossplatz Süd",
+                "URL": "https://www.stadt-muenster.de/tiefbauamt/parkleitsystem/parkhaeuser/detailansicht/parkhaus/6.html",
+                "parkingTotal": "460",
+                "parkingFree": 166,
+                "status": "frei",
+                "type": "Parkplatz"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3405424,
+                    5759400
+                ]
+            },
+            "properties": {
+                "LFDNR": 7,
+                "NAME": "Parkhaus Aegidii",
+                "URL": "https://www.stadt-muenster.de/tiefbauamt/parkleitsystem/parkhaeuser/detailansicht/parkhaus/7.html",
+                "parkingTotal": "750",
+                "parkingFree": 490,
+                "status": "frei",
+                "type": "Parkhaus"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3405157,
+                    5759309
+                ]
+            },
+            "properties": {
+                "LFDNR": 8,
+                "NAME": "Parkplatz Georgskommende",
+                "URL": "https://www.stadt-muenster.de/tiefbauamt/parkleitsystem/parkhaeuser/detailansicht/parkhaus/8.html",
+                "parkingTotal": "272",
+                "parkingFree": 190,
+                "status": "frei",
+                "type": "Parkhaus"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3405660,
+                    5759319
+                ]
+            },
+            "properties": {
+                "LFDNR": 9,
+                "NAME": "Parkhaus Münster-Arkaden",
+                "URL": "https://www.stadt-muenster.de/tiefbauamt/parkleitsystem/parkhaeuser/detailansicht/parkhaus/9.html",
+                "parkingTotal": "150",
+                "parkingFree": 0,
+                "status": "geschlossen",
+                "type": "Parkhaus"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3405933,
+                    5759480
+                ]
+            },
+            "properties": {
+                "LFDNR": 10,
+                "NAME": "Parkhaus Karstadt",
+                "URL": "https://www.stadt-muenster.de/tiefbauamt/parkleitsystem/parkhaeuser/detailansicht/parkhaus/10.html",
+                "parkingTotal": "183",
+                "parkingFree": 110,
+                "status": "frei",
+                "type": "Parkhaus"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3405888,
+                    5759343
+                ]
+            },
+            "properties": {
+                "LFDNR": 11,
+                "NAME": "Parkhaus Stubengasse",
+                "URL": "https://www.stadt-muenster.de/tiefbauamt/parkleitsystem/parkhaeuser/detailansicht/parkhaus/11.html",
+                "parkingTotal": "318",
+                "parkingFree": 140,
+                "status": "frei",
+                "type": "Parkhaus"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3406424,
+                    5759100
+                ]
+            },
+            "properties": {
+                "LFDNR": 12,
+                "NAME": "Parkhaus Bremer Platz",
+                "URL": "https://www.stadt-muenster.de/tiefbauamt/parkleitsystem/parkhaeuser/detailansicht/parkhaus/12.html",
+                "parkingTotal": "354",
+                "parkingFree": 149,
+                "status": "frei",
+                "type": "Parkhaus"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3405989,
+                    5758864
+                ]
+            },
+            "properties": {
+                "LFDNR": 13,
+                "NAME": "Parkhaus Engelenschanze",
+                "URL": "https://www.stadt-muenster.de/tiefbauamt/parkleitsystem/parkhaeuser/detailansicht/parkhaus/13.html",
+                "parkingTotal": "480",
+                "parkingFree": 276,
+                "status": "frei",
+                "type": "Parkhaus"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3406095,
+                    5758805
+                ]
+            },
+            "properties": {
+                "LFDNR": 14,
+                "NAME": "Parkhaus Bahnhofstraße",
+                "URL": "https://www.stadt-muenster.de/tiefbauamt/parkleitsystem/parkhaeuser/detailansicht/parkhaus/14.html",
+                "parkingTotal": "311",
+                "parkingFree": 181,
+                "status": "frei",
+                "type": "Parkhaus"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3406295,
+                    5758200
+                ]
+            },
+            "properties": {
+                "LFDNR": 15,
+                "NAME": "Parkhaus Cineplex",
+                "URL": "https://www.stadt-muenster.de/tiefbauamt/parkleitsystem/parkhaeuser/detailansicht/parkhaus/15.html",
+                "parkingTotal": "590",
+                "parkingFree": 487,
+                "status": "frei",
+                "type": "Parkhaus"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3406632,
+                    5758142
+                ]
+            },
+            "properties": {
+                "LFDNR": 16,
+                "NAME": "Parkhaus PH Stadthaus 3",
+                "URL": "https://www.stadt-muenster.de/tiefbauamt/parkleitsystem/parkhaeuser/detailansicht/parkhaus/16.html",
+                "parkingTotal": "372",
+                "parkingFree": 241,
+                "status": "frei",
+                "type": "Parkhaus"
+            }
+        }
+    ]
+}
