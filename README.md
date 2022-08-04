@@ -178,7 +178,7 @@ SOFTWARE.
 [code-quality]: https://lgtm.com/projects/g/klaasnicolaas/python-muenster/context:python
 [commits-shield]: https://img.shields.io/github/commit-activity/y/klaasnicolaas/python-muenster.svg
 [commits-url]: https://github.com/klaasnicolaas/python-muenster/commits/main
-[codecov-shield]: https://codecov.io/gh/klaasnicolaas/python-muenster/branch/main/graph/badge.svg?token=jTIsaqV5x0
+[codecov-shield]: https://codecov.io/gh/klaasnicolaas/python-muenster/branch/main/graph/badge.svg?token=OZgV3Ib3Er
 [codecov-url]: https://codecov.io/gh/klaasnicolaas/python-muenster
 [forks-shield]: https://img.shields.io/github/forks/klaasnicolaas/python-muenster.svg
 [forks-url]: https://github.com/klaasnicolaas/python-muenster/network/members
@@ -187,7 +187,7 @@ SOFTWARE.
 [license-shield]: https://img.shields.io/github/license/klaasnicolaas/python-muenster.svg
 [last-commit-shield]: https://img.shields.io/github/last-commit/klaasnicolaas/python-muenster.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
-[maintainability-shield]: https://api.codeclimate.com/v1/badges/1b4ebe208e72d8f467f9/maintainability
+[maintainability-shield]: https://api.codeclimate.com/v1/badges/cb6cb45c337d037071b7/maintainability
 [maintainability-url]: https://codeclimate.com/github/klaasnicolaas/python-muenster/maintainability
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [pypi]: https://pypi.org/project/muenster/
