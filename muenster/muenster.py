@@ -1,4 +1,4 @@
-"""Asynchronous Python client providing Open Data information of Muenster."""
+"""Asynchronous Python client providing Open Data information of Münster."""
 from __future__ import annotations
 
 import asyncio
@@ -19,7 +19,7 @@ from .models import Garage
 
 @dataclass
 class ODPMuenster:
-    """Main class for handling data fetchting from Open Data Platform of Muenster."""
+    """Main class for handling data fetchting from Open Data Platform of Münster."""
 
     request_timeout: float = 10.0
     session: aiohttp.client.ClientSession | None = None
@@ -33,7 +33,7 @@ class ODPMuenster:
         method: str = hdrs.METH_GET,
         params: dict[str, Any] | None = None,
     ) -> Any:
-        """Handle a request to the Open Data Platform API of Muenster.
+        """Handle a request to the Open Data Platform API of Münster.
 
         Args:
             uri: Request URI, without '/', for example, 'status'
@@ -42,7 +42,7 @@ class ODPMuenster:
 
         Returns:
             A Python dictionary (text) with the response from
-            the Open Data Platform API of Muenster.
+            the Open Data Platform API of Münster.
 
         Raises:
             ODPMuensterConnectionError: Timeout occurred while
@@ -101,7 +101,7 @@ class ODPMuenster:
         """Async enter.
 
         Returns:
-            The Open Data Platform Muenster object.
+            The Open Data Platform Münster object.
         """
         return self
 
@@ -116,7 +116,7 @@ class ODPMuenster:
 
 @dataclass
 class StadtMuenster:
-    """Main class for handling data fetchting from Stadt of Muenster."""
+    """Main class for handling data fetchting from Stadt of Münster."""
 
     request_timeout: float = 10.0
     session: aiohttp.client.ClientSession | None = None
@@ -130,7 +130,7 @@ class StadtMuenster:
         method: str = hdrs.METH_GET,
         params: dict[str, Any] | None = None,
     ) -> Any:
-        """Handle a request to the Open Data Platform API of Muenster.
+        """Handle a request to the Open Data Platform API of Münster.
 
         Args:
             uri: Request URI, without '/', for example, 'status'
@@ -139,7 +139,7 @@ class StadtMuenster:
 
         Returns:
             A Python dictionary (text) with the response from
-            the Open Data Platform API of Muenster.
+            the Open Data Platform API of Münster.
 
         Raises:
             ODPMuensterConnectionError: Timeout occurred while
@@ -214,7 +214,7 @@ class StadtMuenster:
         """Async enter.
 
         Returns:
-            The Stadt Muenster object.
+            The Stadt Münster object.
         """
         return self
 

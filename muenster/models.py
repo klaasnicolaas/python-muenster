@@ -1,4 +1,4 @@
-"""Models for Open Data Platform of Muenster."""
+"""Models for Open Data Platform of Münster."""
 from __future__ import annotations
 
 from dataclasses import dataclass

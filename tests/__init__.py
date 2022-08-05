@@ -1,4 +1,4 @@
-"""Asynchronous Python client providing Open Data information of Muenster."""
+"""Asynchronous Python client providing Open Data information of Münster."""
 import os
 
 

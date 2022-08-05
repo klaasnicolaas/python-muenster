@@ -1,5 +1,5 @@
 # pylint: disable=W0621
-"""Asynchronous Python client providing Open Data information of Muenster."""
+"""Asynchronous Python client providing Open Data information of Münster."""
 
 import asyncio
 
@@ -7,7 +7,7 @@ from muenster import StadtMuenster
 
 
 async def main() -> None:
-    """Show example on using the Muenster API client."""
+    """Show example on using the Münster API client."""
     async with StadtMuenster() as client:
         garages = await client.garages()
 
