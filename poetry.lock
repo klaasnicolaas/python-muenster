@@ -240,7 +240,7 @@ python-versions = "*"
 
 [[package]]
 name = "dparse"
-version = "0.5.1"
+version = "0.6.2"
 description = "A parser for Python dependency files"
 category = "dev"
 optional = false
@@ -248,10 +248,10 @@ python-versions = ">=3.5"
 
 [package.dependencies]
 packaging = "*"
-pyyaml = "*"
 toml = "*"
 
 [package.extras]
+conda = ["pyyaml"]
 pipenv = ["pipenv"]
 
 [[package]]
@@ -806,7 +806,7 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "safety"
-version = "2.1.1"
+version = "2.2.0"
 description = "Checks installed dependencies for known vulnerabilities and licenses."
 category = "dev"
 optional = false
@@ -814,7 +814,7 @@ python-versions = "*"
 
 [package.dependencies]
 Click = ">=8.0.2"
-dparse = ">=0.5.1"
+dparse = ">=0.6.2"
 packaging = ">=21.0"
 requests = "*"
 "ruamel.yaml" = ">=0.17.21"
@@ -985,7 +985,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "875e3790f6a95c124959583f818662503176a330075bcdd6f90b5ec711acf8a9"
+content-hash = "29d8971104e5c097c151688755268be0231b5bba620646ef7896216d8cdc6c7a"
 
 [metadata.files]
 aiohttp = [
@@ -1208,8 +1208,8 @@ distlib = [
     {file = "distlib-0.3.5.tar.gz", hash = "sha256:a7f75737c70be3b25e2bee06288cec4e4c221de18455b2dd037fe2a795cab2fe"},
 ]
 dparse = [
-    {file = "dparse-0.5.1-py3-none-any.whl", hash = "sha256:e953a25e44ebb60a5c6efc2add4420c177f1d8404509da88da9729202f306994"},
-    {file = "dparse-0.5.1.tar.gz", hash = "sha256:a1b5f169102e1c894f9a7d5ccf6f9402a836a5d24be80a986c7ce9eaed78f367"},
+    {file = "dparse-0.6.2-py3-none-any.whl", hash = "sha256:8097076f1dd26c377f30d4745e6ec18fef42f3bf493933b842ac5bafad8c345f"},
+    {file = "dparse-0.6.2.tar.gz", hash = "sha256:d45255bda21f998bc7ddf2afd5e62505ba6134756ba2d42a84c56b0826614dfe"},
 ]
 eradicate = [
     {file = "eradicate-2.1.0-py3-none-any.whl", hash = "sha256:8bfaca181db9227dc88bdbce4d051a9627604c2243e7d85324f6d6ce0fd08bb2"},
@@ -1535,6 +1535,7 @@ pyparsing = [
 ]
 pyproj = [
     {file = "pyproj-3.4.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:f343725566267a296b09ee7e591894f1fdc90f84f8ad5ec476aeb53bd4479c07"},
+    {file = "pyproj-3.4.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:5816807ca0bdc7256558770c6206a6783a3f02bcf844f94ee245f197bb5f7285"},
     {file = "pyproj-3.4.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e7e609903572a56cca758bbaee5c1663c3e829ddce5eec4f368e68277e37022b"},
     {file = "pyproj-3.4.0-cp310-cp310-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:4fd425ee8b6781c249c7adb7daa2e6c41ce573afabe4f380f5eecd913b56a3be"},
     {file = "pyproj-3.4.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:954b068136518b3174d0a99448056e97af62b63392a95c420894f7de2229dae6"},
@@ -1550,6 +1551,7 @@ pyproj = [
     {file = "pyproj-3.4.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f80adda8c54b84271a93829477a01aa57bc178c834362e9f74e1de1b5033c74c"},
     {file = "pyproj-3.4.0-cp38-cp38-win_amd64.whl", hash = "sha256:221d8939685e0c43ee594c9f04b6a73a10e8e1cc0e85f28be0b4eb2f1bc8777d"},
     {file = "pyproj-3.4.0-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:d94afed99f31673d3d19fe750283621e193e2a53ca9e0443bf9d092c3905833b"},
+    {file = "pyproj-3.4.0-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:0fff9c3a991508f16027be27d153f6c5583d03799443639d13c681e60f49e2d7"},
     {file = "pyproj-3.4.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:3b85acf09e5a9e35cd9ee72989793adb7089b4e611be02a43d3d0bda50ad116b"},
     {file = "pyproj-3.4.0-cp39-cp39-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:45554f47d1a12a84b0620e4abc08a2a1b5d9f273a4759eaef75e74788ec7162a"},
     {file = "pyproj-3.4.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:12f62c20656ac9b6076ebb213e9a635d52f4f01fef95310121d337e62e910cb6"},
@@ -1661,8 +1663,8 @@ requests = [
     {file = "ruamel.yaml.clib-0.2.6.tar.gz", hash = "sha256:4ff604ce439abb20794f05613c374759ce10e3595d1867764dd1ae675b85acbd"},
 ]
 safety = [
-    {file = "safety-2.1.1-py3-none-any.whl", hash = "sha256:05ba551fb61ef24c864835d21089f75bc8b37292680047b9f29693a6552e2fc7"},
-    {file = "safety-2.1.1.tar.gz", hash = "sha256:dbc5dffa2e47da76cc43dfe8cbbbfca99d29118d0c6c54dfcfa11c2bd349dff6"},
+    {file = "safety-2.2.0-py3-none-any.whl", hash = "sha256:b1a0f4c34fb41c502a7a5c54774c18376da382bc9d866ee26b39b2c747c0de40"},
+    {file = "safety-2.2.0.tar.gz", hash = "sha256:6745de12acbd60a58001fe66cb540355187d7b991b30104d9ef14ff4e4826073"},
 ]
 setuptools = [
     {file = "setuptools-65.3.0-py3-none-any.whl", hash = "sha256:2e24e0bec025f035a2e72cdd1961119f557d78ad331bb00ff82efb2ab8da8e82"},
