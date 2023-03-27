@@ -37,7 +37,7 @@ pip install muenster
 
 You can read the following datasets with this package:
 
-- [Garages / Parkleitsystem][garages] (16 locations)
+- [Garages / Parkleitsystem][garages] (17 locations)
 
 <details>
     <summary>Click here to get more details</summary>

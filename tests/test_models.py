@@ -1,6 +1,5 @@
 """Test the models."""
-import aiohttp
-import pytest
+from aiohttp import ClientSession
 from aresponses import ResponsesMockServer
 
 from muenster import Garage, StadtMuenster
@@ -8,7 +7,6 @@ from muenster import Garage, StadtMuenster
 from . import load_fixtures
 
 
-@pytest.mark.asyncio
 async def test_all_garages(aresponses: ResponsesMockServer) -> None:
     """Test all garages function."""
     aresponses.add(
@@ -21,7 +19,7 @@ async def test_all_garages(aresponses: ResponsesMockServer) -> None:
             text=load_fixtures("garages.json"),
         ),
     )
-    async with aiohttp.ClientSession() as session:
+    async with ClientSession() as session:
         client = StadtMuenster(session=session)
         spaces: list[Garage] = await client.garages()
         assert spaces is not None

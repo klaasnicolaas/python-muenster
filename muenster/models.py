@@ -23,16 +23,17 @@ class Garage:
     latitude: float
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any]) -> Garage:
+    def from_dict(cls: type[Garage], data: dict[str, Any]) -> Garage:
         """Return a Garage object from a dictionary.
 
         Args:
+        ----
             data: The data from the API.
 
         Returns:
+        -------
             A Garage object.
         """
-
         attr = data["properties"]
         geo = data["geometry"]["coordinates"]
 

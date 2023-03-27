@@ -6,11 +6,11 @@ import json
 import socket
 from dataclasses import dataclass
 from importlib import metadata
-from typing import Any
+from typing import Any, cast
 
-import aiohttp
 import async_timeout
-from aiohttp import hdrs
+from aiohttp import ClientError, ClientSession
+from aiohttp.hdrs import METH_GET
 from yarl import URL
 
 from .exceptions import ODPMuensterConnectionError, ODPMuensterError
@@ -22,7 +22,7 @@ class ODPMuenster:
     """Main class for handling data fetchting from Open Data Platform of Münster."""
 
     request_timeout: float = 10.0
-    session: aiohttp.client.ClientSession | None = None
+    session: ClientSession | None = None
 
     _close_session: bool = False
 
@@ -30,28 +30,33 @@ class ODPMuenster:
         self,
         uri: str,
         *,
-        method: str = hdrs.METH_GET,
+        method: str = METH_GET,
         params: dict[str, Any] | None = None,
     ) -> Any:
         """Handle a request to the Open Data Platform API of Münster.
 
         Args:
+        ----
             uri: Request URI, without '/', for example, 'status'
             method: HTTP method to use, for example, 'GET'
             params: Extra options to improve or limit the response.
 
         Returns:
+        -------
             A Python dictionary (text) with the response from
             the Open Data Platform API of Münster.
 
         Raises:
+        ------
             ODPMuensterConnectionError: Timeout occurred while
                 connecting to the Open Data Platform API.
             ODPMuensterError: If the data is not valid.
         """
         version = metadata.version(__package__)
         url = URL.build(
-            scheme="https", host="opendata.stadt-muenster.de", path="/dataset/"
+            scheme="https",
+            host="opendata.stadt-muenster.de",
+            path="/dataset/",
         ).join(URL(uri))
 
         headers = {
@@ -60,7 +65,7 @@ class ODPMuenster:
         }
 
         if self.session is None:
-            self.session = aiohttp.ClientSession()
+            self.session = ClientSession()
             self._close_session = True
 
         try:
@@ -74,23 +79,26 @@ class ODPMuenster:
                 )
                 response.raise_for_status()
         except asyncio.TimeoutError as exception:
+            msg = "Timeout occurred while connecting to the Open Data Platform API."
             raise ODPMuensterConnectionError(
-                "Timeout occurred while connecting to the Open Data Platform API."
+                msg,
             ) from exception
-        except (aiohttp.ClientError, socket.gaierror) as exception:
+        except (ClientError, socket.gaierror) as exception:
+            msg = "Error occurred while communicating with Open Data Platform API."
             raise ODPMuensterConnectionError(
-                "Error occurred while communicating with Open Data Platform API."
+                msg,
             ) from exception
 
         content_type = response.headers.get("Content-Type", "")
         if "application/json" not in content_type:
             text = await response.text()
+            msg = "Unexpected content type response from the Open Data Platform API"
             raise ODPMuensterError(
-                "Unexpected content type response from the Open Data Platform API",
+                msg,
                 {"Content-Type": content_type, "Response": text},
             )
 
-        return await response.json()
+        return cast(dict[str, Any], await response.json())
 
     async def close(self) -> None:
         """Close open client session."""
@@ -100,7 +108,8 @@ class ODPMuenster:
     async def __aenter__(self) -> ODPMuenster:
         """Async enter.
 
-        Returns:
+        Returns
+        -------
             The Open Data Platform Münster object.
         """
         return self
@@ -109,6 +118,7 @@ class ODPMuenster:
         """Async exit.
 
         Args:
+        ----
             _exc_info: Exec type.
         """
         await self.close()
@@ -119,7 +129,7 @@ class StadtMuenster:
     """Main class for handling data fetchting from Stadt of Münster."""
 
     request_timeout: float = 10.0
-    session: aiohttp.client.ClientSession | None = None
+    session: ClientSession | None = None
 
     _close_session: bool = False
 
@@ -127,28 +137,31 @@ class StadtMuenster:
         self,
         uri: str,
         *,
-        method: str = hdrs.METH_GET,
+        method: str = METH_GET,
         params: dict[str, Any] | None = None,
     ) -> Any:
         """Handle a request to the Open Data Platform API of Münster.
 
         Args:
+        ----
             uri: Request URI, without '/', for example, 'status'
             method: HTTP method to use, for example, 'GET'
             params: Extra options to improve or limit the response.
 
         Returns:
+        -------
             A Python dictionary (text) with the response from
             the Open Data Platform API of Münster.
 
         Raises:
+        ------
             ODPMuensterConnectionError: Timeout occurred while
                 connecting to the Open Data Platform API.
             ODPMuensterError: If the data is not valid.
         """
         version = metadata.version(__package__)
         url = URL.build(scheme="https", host="stadt-muenster.de", path="/").join(
-            URL(uri)
+            URL(uri),
         )
 
         headers = {
@@ -157,7 +170,7 @@ class StadtMuenster:
         }
 
         if self.session is None:
-            self.session = aiohttp.ClientSession()
+            self.session = ClientSession()
             self._close_session = True
 
         try:
@@ -171,19 +184,22 @@ class StadtMuenster:
                 )
                 response.raise_for_status()
         except asyncio.TimeoutError as exception:
+            msg = "Timeout occurred while connecting to the Open Data Platform API."
             raise ODPMuensterConnectionError(
-                "Timeout occurred while connecting to the Open Data Platform API."
+                msg,
             ) from exception
-        except (aiohttp.ClientError, socket.gaierror) as exception:
+        except (ClientError, socket.gaierror) as exception:
+            msg = "Error occurred while communicating with Open Data Platform API."
             raise ODPMuensterConnectionError(
-                "Error occurred while communicating with Open Data Platform API."
+                msg,
             ) from exception
 
         content_type = response.headers.get("Content-Type", "")
         if "text/html" not in content_type:
             text = await response.text()
+            msg = "Unexpected content type response from the Open Data Platform API"
             raise ODPMuensterError(
-                "Unexpected content type response from the Open Data Platform API",
+                msg,
                 {"Content-Type": content_type, "Response": text},
             )
 
@@ -192,7 +208,8 @@ class StadtMuenster:
     async def garages(self) -> list[Garage]:
         """Get list of parking garages.
 
-        Returns:
+        Returns
+        -------
             A list of Garage objects.
         """
         results: list[Garage] = []
@@ -213,7 +230,8 @@ class StadtMuenster:
     async def __aenter__(self) -> StadtMuenster:
         """Async enter.
 
-        Returns:
+        Returns
+        -------
             The Stadt Münster object.
         """
         return self
@@ -222,6 +240,7 @@ class StadtMuenster:
         """Async exit.
 
         Args:
+        ----
             _exc_info: Exec type.
         """
         await self.close()
