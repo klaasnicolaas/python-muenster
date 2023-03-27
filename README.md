@@ -1,4 +1,5 @@
-## Python - ODP Münster Client
+<!-- Banner -->
+![alt Banner of the ODP Muenster package](https://raw.githubusercontent.com/klaasnicolaas/python-muenster/main/assets/header_muenster-min.png)
 
 <!-- PROJECT SHIELDS -->
 [![GitHub Release][releases-shield]][releases]
@@ -8,17 +9,17 @@
 [![License][license-shield]](LICENSE)
 
 [![GitHub Activity][commits-shield]][commits-url]
-[![Forks][forks-shield]][forks-url]
+[![PyPi Downloads][downloads-shield]][downloads-url]
+[![GitHub Last Commit][last-commit-shield]][commits-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![GitHub Last Commit][last-commit-shield]][commits-url]
 
 [![Code Quality][code-quality-shield]][code-quality]
-[![Maintainability][maintainability-shield]][maintainability-url]
-[![Code Coverage][codecov-shield]][codecov-url]
-
 [![Build Status][build-shield]][build-url]
 [![Typing Status][typing-shield]][typing-url]
+
+[![Maintainability][maintainability-shield]][maintainability-url]
+[![Code Coverage][codecov-shield]][codecov-url]
 
 Asynchronous Python client for the open datasets of Münster (Germany).
 
@@ -170,14 +171,14 @@ SOFTWARE.
 <!-- MARKDOWN LINKS & IMAGES -->
 [build-shield]: https://github.com/klaasnicolaas/python-muenster/actions/workflows/tests.yaml/badge.svg
 [build-url]: https://github.com/klaasnicolaas/python-muenster/actions/workflows/tests.yaml
-[code-quality-shield]: https://img.shields.io/lgtm/grade/python/g/klaasnicolaas/python-muenster.svg?logo=lgtm&logoWidth=18
-[code-quality]: https://lgtm.com/projects/g/klaasnicolaas/python-muenster/context:python
+[code-quality-shield]: https://github.com/klaasnicolaas/python-muenster/actions/workflows/codeql.yaml/badge.svg
+[code-quality]: https://github.com/klaasnicolaas/python-muenster/actions/workflows/codeql.yaml
 [commits-shield]: https://img.shields.io/github/commit-activity/y/klaasnicolaas/python-muenster.svg
 [commits-url]: https://github.com/klaasnicolaas/python-muenster/commits/main
 [codecov-shield]: https://codecov.io/gh/klaasnicolaas/python-muenster/branch/main/graph/badge.svg?token=OZgV3Ib3Er
 [codecov-url]: https://codecov.io/gh/klaasnicolaas/python-muenster
-[forks-shield]: https://img.shields.io/github/forks/klaasnicolaas/python-muenster.svg
-[forks-url]: https://github.com/klaasnicolaas/python-muenster/network/members
+[downloads-shield]: https://img.shields.io/pypi/dm/muenster
+[downloads-url]: https://pypistats.org/packages/muenster
 [issues-shield]: https://img.shields.io/github/issues/klaasnicolaas/python-muenster.svg
 [issues-url]: https://github.com/klaasnicolaas/python-muenster/issues
 [license-shield]: https://img.shields.io/github/license/klaasnicolaas/python-muenster.svg
