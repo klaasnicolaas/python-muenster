@@ -1,4 +1,5 @@
-## Python - ODP Münster Client
+<!-- Banner -->
+![alt Banner of the ODP Muenster package](https://raw.githubusercontent.com/klaasnicolaas/python-muenster/main/assets/header_muenster-min.png)
 
 <!-- PROJECT SHIELDS -->
 [![GitHub Release][releases-shield]][releases]
