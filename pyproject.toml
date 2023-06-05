@@ -22,7 +22,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 packages = [
-    { include = "muenster" }
+    { include = "muenster", from = "src" },
 ]
 
 [tool.poetry.dependencies]
