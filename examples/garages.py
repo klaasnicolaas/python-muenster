@@ -11,9 +11,8 @@ async def main() -> None:
     async with StadtMuenster() as client:
         garages = await client.garages()
 
-        count: int
-        for index, item in enumerate(garages, 1):
-            count = index
+        count: int = len(garages)
+        for item in garages:
             print(item)
 
         print("__________________________")

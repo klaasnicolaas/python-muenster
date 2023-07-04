@@ -212,15 +212,11 @@ class StadtMuenster:
         -------
             A list of Garage objects.
         """
-        results: list[Garage] = []
         locations = await self._request(
             "index.php",
             params={"id": "10910"},
         )
-
-        for item in locations["features"]:
-            results.append(Garage.from_dict(item))
-        return results
+        return [Garage.from_dict(item) for item in locations["features"]]
 
     async def close(self) -> None:
         """Close open client session."""
