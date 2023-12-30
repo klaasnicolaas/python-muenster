@@ -6,9 +6,8 @@ import json
 import socket
 from dataclasses import dataclass
 from importlib import metadata
-from typing import TYPE_CHECKING, Any, cast
+from typing import Any, Self, cast
 
-import async_timeout
 from aiohttp import ClientError, ClientSession
 from aiohttp.hdrs import METH_GET
 from yarl import URL
@@ -16,13 +15,10 @@ from yarl import URL
 from .exceptions import ODPMuensterConnectionError, ODPMuensterError
 from .models import Garage
 
-if TYPE_CHECKING:
-    from typing_extensions import Self
-
 
 @dataclass
 class ODPMuenster:
-    """Main class for handling data fetchting from Open Data Platform of Münster."""
+    """Main class for handling data fetching from Open Data Platform of Münster."""
 
     request_timeout: float = 10.0
     session: ClientSession | None = None
@@ -72,7 +68,7 @@ class ODPMuenster:
             self._close_session = True
 
         try:
-            async with async_timeout.timeout(self.request_timeout):
+            async with asyncio.timeout(self.request_timeout):
                 response = await self.session.request(
                     method,
                     url,
@@ -129,7 +125,7 @@ class ODPMuenster:
 
 @dataclass
 class StadtMuenster:
-    """Main class for handling data fetchting from Stadt of Münster."""
+    """Main class for handling data fetching from Stadt of Münster."""
 
     request_timeout: float = 10.0
     session: ClientSession | None = None
@@ -177,7 +173,7 @@ class StadtMuenster:
             self._close_session = True
 
         try:
-            async with async_timeout.timeout(self.request_timeout):
+            async with asyncio.timeout(self.request_timeout):
                 response = await self.session.request(
                     method,
                     url,
