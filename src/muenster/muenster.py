@@ -50,6 +50,7 @@ class ODPMuenster:
             ODPMuensterConnectionError: Timeout occurred while
                 connecting to the Open Data Platform API.
             ODPMuensterError: If the data is not valid.
+
         """
         version = metadata.version(__package__)
         url = URL.build(
@@ -77,7 +78,7 @@ class ODPMuenster:
                     ssl=True,
                 )
                 response.raise_for_status()
-        except asyncio.TimeoutError as exception:
+        except TimeoutError as exception:
             msg = "Timeout occurred while connecting to the Open Data Platform API."
             raise ODPMuensterConnectionError(
                 msg,
@@ -110,6 +111,7 @@ class ODPMuenster:
         Returns
         -------
             The Open Data Platform Münster object.
+
         """
         return self
 
@@ -119,6 +121,7 @@ class ODPMuenster:
         Args:
         ----
             _exc_info: Exec type.
+
         """
         await self.close()
 
@@ -157,6 +160,7 @@ class StadtMuenster:
             ODPMuensterConnectionError: Timeout occurred while
                 connecting to the Open Data Platform API.
             ODPMuensterError: If the data is not valid.
+
         """
         version = metadata.version(__package__)
         url = URL.build(scheme="https", host="stadt-muenster.de", path="/").join(
@@ -182,7 +186,7 @@ class StadtMuenster:
                     ssl=True,
                 )
                 response.raise_for_status()
-        except asyncio.TimeoutError as exception:
+        except TimeoutError as exception:
             msg = "Timeout occurred while connecting to the Open Data Platform API."
             raise ODPMuensterConnectionError(
                 msg,
@@ -210,6 +214,7 @@ class StadtMuenster:
         Returns
         -------
             A list of Garage objects.
+
         """
         locations = await self._request(
             "index.php",
@@ -228,6 +233,7 @@ class StadtMuenster:
         Returns
         -------
             The Stadt Münster object.
+
         """
         return self
 
@@ -237,5 +243,6 @@ class StadtMuenster:
         Args:
         ----
             _exc_info: Exec type.
+
         """
         await self.close()
