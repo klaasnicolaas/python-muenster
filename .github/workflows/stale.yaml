@@ -4,13 +4,16 @@ name: Stale
 # yamllint disable-line rule:truthy
 on:
   schedule:
-    - cron: "0 16 * * *"
+    - cron: "0 7 * * *"
   workflow_dispatch:
 
 jobs:
   stale:
     name: 🧹 Clean up stale issues and PRs
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
     steps:
       - name: 🚀 Run stale
         uses: actions/stale@v9.0.0
@@ -24,9 +27,11 @@ jobs:
           stale-issue-message: >
             There hasn't been any activity on this issue recently, so we
             clean up some of the older and inactive issues.
+
             Please make sure to update to the latest version and
             check if that solves the issue. Let us know if that works for you
             by leaving a comment 👍
+
             This issue has now been marked as stale and will be closed if no
             further activity occurs. Thanks!
           stale-pr-label: "stale"
