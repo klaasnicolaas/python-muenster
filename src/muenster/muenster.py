@@ -16,6 +16,8 @@ from yarl import URL
 from .exceptions import ODPMuensterConnectionError, ODPMuensterError
 from .models import Garage
 
+VERSION = metadata.version(__package__)
+
 
 @dataclass
 class ODPMuenster:
@@ -53,7 +55,6 @@ class ODPMuenster:
             ODPMuensterError: If the data is not valid.
 
         """
-        version = metadata.version(__package__)
         url = URL.build(
             scheme="https",
             host="opendata.stadt-muenster.de",
@@ -62,7 +63,7 @@ class ODPMuenster:
 
         headers = {
             "Accept": "application/json",
-            "User-Agent": f"PythonODPMuenster/{version}",
+            "User-Agent": f"PythonODPMuenster/{VERSION}",
         }
 
         if self.session is None:
@@ -163,14 +164,13 @@ class StadtMuenster:
             ODPMuensterError: If the data is not valid.
 
         """
-        version = metadata.version(__package__)
         url = URL.build(scheme="https", host="stadt-muenster.de", path="/").join(
             URL(uri),
         )
 
         headers = {
             "Accept": "text/html",
-            "User-Agent": f"PythonStadtMuenster/{version}",
+            "User-Agent": f"PythonStadtMuenster/{VERSION}",
         }
 
         if self.session is None:
