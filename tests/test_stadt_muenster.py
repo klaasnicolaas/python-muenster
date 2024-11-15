@@ -14,7 +14,9 @@ from muenster.exceptions import ODPMuensterConnectionError, ODPMuensterError
 from . import load_fixtures
 
 
-async def test_json_request(aresponses: ResponsesMockServer) -> None:
+async def test_json_request(
+    aresponses: ResponsesMockServer, stadt_muenster_client: StadtMuenster
+) -> None:
     """Test JSON response is handled correctly."""
     aresponses.add(
         "stadt-muenster.de",
@@ -26,11 +28,8 @@ async def test_json_request(aresponses: ResponsesMockServer) -> None:
             text=load_fixtures("garages.json"),
         ),
     )
-    async with ClientSession() as session:
-        client = StadtMuenster(session=session)
-        response = await client._request("test")
-        assert response is not None
-        await client.close()
+    await stadt_muenster_client._request("test")
+    await stadt_muenster_client.close()
 
 
 async def test_internal_session(aresponses: ResponsesMockServer) -> None:
@@ -71,7 +70,9 @@ async def test_timeout(aresponses: ResponsesMockServer) -> None:
             assert await client._request("test")
 
 
-async def test_content_type(aresponses: ResponsesMockServer) -> None:
+async def test_content_type(
+    aresponses: ResponsesMockServer, stadt_muenster_client: StadtMuenster
+) -> None:
     """Test request content type error from Open Data Platform API of Münster."""
     aresponses.add(
         "stadt-muenster.de",
@@ -82,11 +83,8 @@ async def test_content_type(aresponses: ResponsesMockServer) -> None:
             headers={"Content-Type": "blabla/blabla"},
         ),
     )
-
-    async with ClientSession() as session:
-        client = StadtMuenster(session=session)
-        with pytest.raises(ODPMuensterError):
-            assert await client._request("test")
+    with pytest.raises(ODPMuensterError):
+        assert await stadt_muenster_client._request("test")
 
 
 async def test_client_error() -> None:
