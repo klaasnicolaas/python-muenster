@@ -5,9 +5,9 @@ from .models import Garage
 from .muenster import ODPMuenster, StadtMuenster
 
 __all__ = [
+    "Garage",
     "ODPMuenster",
     "ODPMuensterConnectionError",
     "ODPMuensterError",
-    "Garage",
     "StadtMuenster",
 ]
