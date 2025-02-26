@@ -55,6 +55,6 @@ class Garage:
                 1,
             ),
             url=attr.get("URL"),
-            longitude=converted[1],
-            latitude=converted[0],
+            longitude=float(converted[1]),
+            latitude=float(converted[0]),
         )
