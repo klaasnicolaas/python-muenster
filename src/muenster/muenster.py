@@ -7,7 +7,7 @@ import json
 import socket
 from dataclasses import dataclass
 from importlib import metadata
-from typing import Any, Self, cast
+from typing import Any, Self
 
 from aiohttp import ClientError, ClientSession
 from aiohttp.hdrs import METH_GET
@@ -100,7 +100,7 @@ class ODPMuenster:
                 {"Content-Type": content_type, "Response": text},
             )
 
-        return cast(dict[str, Any], await response.json())
+        return await response.json()
 
     async def close(self) -> None:
         """Close open client session."""
