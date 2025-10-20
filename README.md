@@ -13,11 +13,8 @@
 [![GitHub Last Commit][last-commit-shield]][commits-url]
 [![Open in Dev Containers][devcontainer-shield]][devcontainer]
 
-[![Code Quality][code-quality-shield]][code-quality]
 [![Build Status][build-shield]][build-url]
 [![Typing Status][typing-shield]][typing-url]
-
-[![Maintainability][maintainability-shield]][maintainability-url]
 [![Code Coverage][codecov-shield]][codecov-url]
 
 Asynchronous Python client for the open datasets of Münster (Germany).
@@ -180,8 +177,6 @@ SOFTWARE.
 <!-- MARKDOWN LINKS & IMAGES -->
 [build-shield]: https://github.com/klaasnicolaas/python-muenster/actions/workflows/tests.yaml/badge.svg
 [build-url]: https://github.com/klaasnicolaas/python-muenster/actions/workflows/tests.yaml
-[code-quality-shield]: https://github.com/klaasnicolaas/python-muenster/actions/workflows/codeql.yaml/badge.svg
-[code-quality]: https://github.com/klaasnicolaas/python-muenster/actions/workflows/codeql.yaml
 [commits-shield]: https://img.shields.io/github/commit-activity/y/klaasnicolaas/python-muenster.svg
 [commits-url]: https://github.com/klaasnicolaas/python-muenster/commits/main
 [codecov-shield]: https://codecov.io/gh/klaasnicolaas/python-muenster/branch/main/graph/badge.svg?token=OZgV3Ib3Er
@@ -193,8 +188,6 @@ SOFTWARE.
 [license-shield]: https://img.shields.io/github/license/klaasnicolaas/python-muenster.svg
 [last-commit-shield]: https://img.shields.io/github/last-commit/klaasnicolaas/python-muenster.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2025.svg
-[maintainability-shield]: https://api.codeclimate.com/v1/badges/cb6cb45c337d037071b7/maintainability
-[maintainability-url]: https://codeclimate.com/github/klaasnicolaas/python-muenster/maintainability
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [pypi]: https://pypi.org/project/muenster/
 [python-versions-shield]: https://img.shields.io/pypi/pyversions/muenster
