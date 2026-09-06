@@ -16,7 +16,7 @@ from yarl import URL
 from .exceptions import ODPMuensterConnectionError, ODPMuensterError
 from .models import Garage
 
-VERSION = metadata.version(__package__)
+VERSION = metadata.version("muenster")
 
 
 @dataclass
