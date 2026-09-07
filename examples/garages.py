@@ -1,4 +1,3 @@
-# pylint: disable=W0621
 """Asynchronous Python client providing Open Data information of Münster."""
 
 import asyncio

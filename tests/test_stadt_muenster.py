@@ -1,6 +1,5 @@
 """Basic tests for the Open Data Platform API of Münster."""
 
-# pylint: disable=protected-access
 import asyncio
 from unittest.mock import patch
 
