@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from dataclasses import replace
 from typing import TYPE_CHECKING
 
 from aresponses import ResponsesMockServer
@@ -30,4 +31,12 @@ async def test_all_garages(
         ),
     )
     spaces: list[Garage] = await stadt_muenster_client.garages()
-    assert spaces == snapshot
+    # Ignore platform-specific PROJ rounding below submillimeter precision.
+    assert [
+        replace(
+            space,
+            latitude=round(space.latitude, 9),
+            longitude=round(space.longitude, 9),
+        )
+        for space in spaces
+    ] == snapshot
